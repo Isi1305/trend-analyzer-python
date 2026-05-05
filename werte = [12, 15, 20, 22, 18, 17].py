@@ -44,3 +44,14 @@ elif score < 0:
     print("Der allgemeine Trend ist fallend.")
 elif score == 0:
     print("Der allgemeine Trend ist stabil.")
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10, 5))
+plt.plot(werte, marker='o', color='orange')
+plt.title('Werte über die Zeit')
+plt.xlabel('Zeit')
+plt.ylabel('Werte')
+plt.grid(True, alpha=0.3)
+plt.show()
