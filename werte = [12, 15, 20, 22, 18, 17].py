@@ -38,3 +38,7 @@ for i in range(len(werte) - 1):
         score += 0
 
 print(f"Trend Score: {score}")
+if score > 0:
+    print("Der allgemeine Trend ist steigend.")
+elif score < 0:
+    print("Der allgemeine Trend ist fallend.")
