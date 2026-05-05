@@ -13,7 +13,7 @@ for wert in werte: #Die Schleife iteriert über jedes Element in der Liste "wert
     elif wert == average:
         print(f"{wert} ist gleich dem Durschnitt.")
 
-if werte[-1] > werte[0]:
+if werte[-1] > werte[0]: #
     print("Trend steigend")
 elif werte[-1] < werte[0]:
     print("Trend fallend")
@@ -28,16 +28,20 @@ for i in range(len(werte) - 1): #Die Schleife läuft von 0 bis zur vorletzten Po
     elif werte[i + 1] == werte[i]:
         print(f"Von {werte[i]} zu {werte[i + 1]}: stabil")
 
-score = 0 #Variable, die den Trend bewertet. Sie wird um 1 erhöht, wenn der Trend strigt und verringert, wenn er fällt.
-for i in range(len(werte) - 1):
-    if werte[i +1] > werte[i]:
-        score += 1
-    elif werte [i + 1] < werte[i]:
-        score -= 1
-    elif werte[i + 1] == werte[i]: #Unnötig, da der Score sich nit verändert, aber gut als Übung.
-        score += 0
+def calculate_trend_score(werte):
+    score = 0 #Variable, die den Trend bewertet. Sie wird um 1 erhöht, wenn der Trend strigt und verringert, wenn er fällt.
+    for i in range(len(werte) - 1):
+        if werte[i +1] > werte[i]:
+            score += 1
+        elif werte [i + 1] < werte[i]:
+            score -= 1
+        elif werte[i + 1] == werte[i]: #Unnötig, da der Score sich nit verändert, aber gut als Übung.
+            score += 0
+    return score
 
+score = calculate_trend_score(werte)
 print(f"Trend Score: {score}")
+
 if score > 0:
     print("Der allgemeine Trend ist steigend.")
 elif score < 0:
