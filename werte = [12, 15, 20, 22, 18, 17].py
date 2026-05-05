@@ -42,3 +42,5 @@ if score > 0:
     print("Der allgemeine Trend ist steigend.")
 elif score < 0:
     print("Der allgemeine Trend ist fallend.")
+elif score == 0:
+    print("Der allgemeine Trend ist stabil.")
