@@ -20,13 +20,16 @@ elif werte[-1] < werte[0]:
 else:
     print("Trend stabil")
 
-for i in range(len(werte) - 1): #Die Schleife läuft von 0 bis zur vorletzten Position.
-    if werte[i +1] > werte[i]: #Vergleich der Werte, um den Trend zu bestimmen #Für mich: i + 1 = „Geh eine Position weiter nach rechts in der Liste“
-        print(f"Von {werte[i] } zu {werte[i + 1]}: steigend")
-    elif werte [i + 1] < werte[i]:
-        print(f"Von {werte[i]} zu {werte[i + 1]}: fallend")
-    elif werte[i + 1] == werte[i]:
-        print(f"Von {werte[i]} zu {werte[i + 1]}: stabil")
+def determine_trend(werte):
+    for i in range(len(werte) - 1): #Die Schleife läuft von 0 bis zur vorletzten Position.
+        if werte[i +1] > werte[i]: #Vergleich der Werte, um den Trend zu bestimmen #Für mich: i + 1 = „Geh eine Position weiter nach rechts in der Liste“
+            print(f"Von {werte[i] } zu {werte[i + 1]}: steigend")
+        elif werte [i + 1] < werte[i]:
+            print(f"Von {werte[i]} zu {werte[i + 1]}: fallend")
+        elif werte[i + 1] == werte[i]:
+            print(f"Von {werte[i]} zu {werte[i + 1]}: stabil")
+
+print(determine_trend(werte))
 
 def calculate_trend_score(werte):
     score = 0 #Variable, die den Trend bewertet. Sie wird um 1 erhöht, wenn der Trend strigt und verringert, wenn er fällt.
