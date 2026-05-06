@@ -1,3 +1,4 @@
+#Analyse der Werte
 werte = [12, 15, 20, 22, 18, 17]
 print(max(werte))
 print(min(werte))
@@ -13,7 +14,8 @@ for wert in werte: #Die Schleife iteriert über jedes Element in der Liste "wert
     elif wert == average:
         print(f"{wert} ist gleich dem Durschnitt.")
 
-if werte[-1] > werte[0]: #
+#Bestimmung des Trends
+if werte[-1] > werte[0]: 
     print("Trend steigend")
 elif werte[-1] < werte[0]:
     print("Trend fallend")
@@ -29,7 +31,6 @@ def determine_trend(werte):
         elif werte[i + 1] == werte[i]:
             print(f"Von {werte[i]} zu {werte[i + 1]}: stabil")
 
-print(determine_trend(werte))
 
 def calculate_trend_score(werte):
     score = 0 #Variable, die den Trend bewertet. Sie wird um 1 erhöht, wenn der Trend strigt und verringert, wenn er fällt.
@@ -52,6 +53,8 @@ elif score < 0:
 elif score == 0:
     print("Der allgemeine Trend ist stabil.")
 
+
+#Visualisierung der Werte
 import pandas as pd
 import matplotlib.pyplot as plt
 
