@@ -6,13 +6,16 @@ print(min(werte))
 average = sum(werte) / len(werte)
 print(average)
 
-for wert in werte: #Die Schleife iteriert über jedes Element in der Liste "werte"
-    if wert > average: #Vergleicht den aktuellen Wert mit dem Durschnitt
-        print(f"{wert} ist über dem Durschnitt.")
-    elif wert < average:
-        print(f"{wert} ist unter dem Durschnitt.")
-    elif wert == average:
-        print(f"{wert} ist gleich dem Durschnitt.")
+def calculate_average(werte):
+    for wert in werte: #Die Schleife iteriert über jedes Element in der Liste "werte"
+        if wert > average: #Vergleicht den aktuellen Wert mit dem Durschnitt
+            print(f"{wert} ist über dem Durschnitt.")
+        elif wert < average:
+            print(f"{wert} ist unter dem Durschnitt.")
+        elif wert == average:
+            print(f"{wert} ist gleich dem Durschnitt.")
+
+calculate_average(werte)
 
 #Bestimmung des Trends
 if werte[-1] > werte[0]: 
