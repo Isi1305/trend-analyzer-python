@@ -46,13 +46,15 @@ def calculate_trend_score(werte):
 score = calculate_trend_score(werte)
 print(f"Trend Score: {score}")
 
-if score > 0:
-    print("Der allgemeine Trend ist steigend.")
-elif score < 0:
-    print("Der allgemeine Trend ist fallend.")
-elif score == 0:
-    print("Der allgemeine Trend ist stabil.")
+def interpret_trend_score(score):
+    if score > 0:
+        print("Der allgemeine Trend ist steigend.")
+    elif score < 0:
+        print("Der allgemeine Trend ist fallend.")
+    elif score == 0:
+        print("Der allgemeine Trend ist stabil.")
 
+interpret_trend_score(score)
 
 #Visualisierung der Werte
 import pandas as pd
